@@ -1,0 +1,37 @@
+<meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Portfolio</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Josefin+Sans:ital,wght@0,100..700;1,100..700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../public/style.css">
+</head>
+<body>
+    <div id="myDiv" class="title">
+    </div>
+    <hr />
+    <div class="img-container">
+        <img class="profile" src="./public/IMAGE 2024-10-15 11:05:52.jpg"/>
+    </div>
+    <div class="container">
+        <a class="box" href="./sections/projects.html"><div><h2>Projects</h2></div></a>
+        <a class="box" href="./sections/about.html"><div><h2>About/Contact me</h2></div></a>
+    </div>
+    <script>
+    var myString = "Hey I'm Raffi, welcome to my portfolio!";
+    var myDiv = document.getElementById("myDiv");
+    function printStringByWord() {
+    var words = myString.split(" ");
+    var index = 0;
+    var intervalId = setInterval(function() {
+        myDiv.innerHTML += words[index] + " ";
+        index++;
+        if(index == words.length) {
+            clearInterval(intervalId);
+        }
+    }, 200);
+} 
+window.onload = printStringByWord()
+</script>
+</body>
+</html>
